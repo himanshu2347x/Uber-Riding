@@ -43,7 +43,7 @@ const CaptainRiding = () => {
       </div>
 
       <div
-        className="h-1/5 p-6 flex items-center justify-between relative bg-yellow-400 pt-10"
+        className="h-1/5 p-6 mb-4 flex items-center justify-between relative bg-yellow-400 pt-10"
         onClick={() => {
           setFinishRidePanel(true);
         }}
