@@ -68,7 +68,7 @@ const ConfirmRide = ({
             setConfirmRidePanel(false);
             createRide();
           }}
-          className="w-full mt-5 mb-4 bg-green-600 text-white font-semibold p-2 rounded-lg"
+          className="w-full mt-4 mb-4 bg-green-600 text-white font-semibold p-2 rounded-lg"
         >
           Confirm
         </button>
