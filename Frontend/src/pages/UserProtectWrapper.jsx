@@ -18,7 +18,7 @@ const UserProtectWrapper = ({ children }) => {
       setIsLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:4000/users/profile`,
+          `https://ridenow-od3s.onrender.com/users/profile`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

@@ -60,7 +60,7 @@ const CaptainHome = () => {
   async function fetchDistance(data) {
     try {
       const response = await axios.get(
-        `http://localhost:4000/maps/get-distance-time`,
+        `https://ridenow-od3s.onrender.com/maps/get-distance-time`,
         {
           params: {
             origin: data.pickup,
@@ -81,7 +81,7 @@ const CaptainHome = () => {
 
   async function confirmRide() {
     const response = await axios.post(
-      `http://localhost:4000/rides/confirm`,
+      `https://ridenow-od3s.onrender.com/rides/confirm`,
       {
         rideId: ride._id,
         captainId: captain._id,

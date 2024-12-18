@@ -12,7 +12,7 @@ const CaptainLogout = () => {
 
         // Correct the URL string
         const response = await axios.get(
-          "http://localhost:4000/captains/logout",
+          "https://ridenow-od3s.onrender.com/captains/logout",
           {
             headers: {
               Authorization: `Bearer ${token}`,

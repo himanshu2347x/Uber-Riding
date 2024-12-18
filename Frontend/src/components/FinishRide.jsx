@@ -9,7 +9,7 @@ const FinishRide = (props) => {
 
   async function endRide() {
     const response = await axios.post(
-      `http://localhost:4000/rides/end-ride`,
+      `https://ridenow-od3s.onrender.com/rides/end-ride`,
       {
         rideId: props.ride._id,
       },

@@ -44,7 +44,7 @@ const CaptainSignup = () => {
       },
     };
     const response = await axios.post(
-      `http://localhost:4000/captains/register`,
+      `https://ridenow-od3s.onrender.com/captains/register`,
       captainData
     );
 

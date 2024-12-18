@@ -20,7 +20,7 @@ const CaptainProtectWrapper = ({ children }) => {
       setIsLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:4000/captains/profile`,
+          `https://ridenow-od3s.onrender.com/captains/profile`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

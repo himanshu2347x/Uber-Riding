@@ -10,15 +10,18 @@ const ConfirmRidePopUp = (props) => {
   const submitHandler = async (e) => {
     e.preventDefault();
 
-    const response = await axios.get(`http://localhost:4000/rides/start-ride`, {
-      params: {
-        rideId: props.ride._id,
-        otp: otp,
-      },
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("captainToken")}`,
-      },
-    });
+    const response = await axios.get(
+      `https://ridenow-od3s.onrender.com/rides/start-ride`,
+      {
+        params: {
+          rideId: props.ride._id,
+          otp: otp,
+        },
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("captainToken")}`,
+        },
+      }
+    );
 
     if (response.status === 200) {
       props.setConfirmRidePopupPanel(false);

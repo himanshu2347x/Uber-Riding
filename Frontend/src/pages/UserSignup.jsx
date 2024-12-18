@@ -32,7 +32,7 @@ const UserSignup = () => {
     };
 
     const response = await axios.post(
-      `http://localhost:4000/users/register`,
+      `https://ridenow-od3s.onrender.com/users/register`,
       newUser
     );
 

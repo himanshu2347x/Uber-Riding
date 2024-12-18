@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 
 export const SocketContext = createContext();
 
-const socket = io(`http://localhost:4000`); 
+const socket = io(`https://ridenow-od3s.onrender.com`); 
 
 const SocketProvider = ({ children }) => {
   useEffect(() => {

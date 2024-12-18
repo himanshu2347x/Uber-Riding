@@ -26,7 +26,7 @@ const Captainlogin = () => {
     };
 
     const response = await axios.post(
-      `http://localhost:4000/captains/login`,
+      `https://ridenow-od3s.onrender.com/captains/login`,
       captain
     );
 

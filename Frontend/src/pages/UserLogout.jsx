@@ -10,7 +10,7 @@ export const UserLogout = () => {
       try {
         const token = localStorage.getItem("userToken");
         const response = await axios.get(
-          `http://localhost:4000/users/logout`,
+          `https://ridenow-od3s.onrender.com/users/logout`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }

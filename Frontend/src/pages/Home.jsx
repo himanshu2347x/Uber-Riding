@@ -68,7 +68,7 @@ socket.on("ride-started", (ride) => {
     setPickup(e.target.value);
     try {
       const response = await axios.get(
-        `http://localhost:4000/maps/get-suggestions`,
+        `https://ridenow-od3s.onrender.com/maps/get-suggestions`,
         {
           params: { input: e.target.value },
           headers: {
@@ -87,7 +87,7 @@ socket.on("ride-started", (ride) => {
     setDestination(e.target.value);
     try {
       const response = await axios.get(
-        `http://localhost:4000/maps/get-suggestions`,
+        `https://ridenow-od3s.onrender.com/maps/get-suggestions`,
         {
           params: { input: e.target.value },
           headers: {
@@ -198,13 +198,13 @@ async function findTrip() {
 
     // Fetch fare and time concurrently
     const [fareResponse, timeResponse] = await Promise.all([
-      axios.get(`http://localhost:4000/rides/get-fare`, {
+      axios.get(`https://ridenow-od3s.onrender.com/rides/get-fare`, {
         params: { pickup, destination },
         headers: {
           Authorization: `Bearer ${localStorage.getItem("userToken")}`,
         },
       }),
-      axios.get(`http://localhost:4000/maps/get-distance-time`, {
+      axios.get(`https://ridenow-od3s.onrender.com/maps/get-distance-time`, {
         params: {
           origin: pickup, // Pass the origin as query param
           destination, // Pass the destination as query param
@@ -232,7 +232,7 @@ async function findTrip() {
 
   async function createRide() {
     const response = await axios.post(
-      `http://localhost:4000/rides/create`,
+      `https://ridenow-od3s.onrender.com/rides/create`,
       {
         pickup,
         destination,
